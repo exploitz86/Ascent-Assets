@@ -26,7 +26,7 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: ascent-assets-${{ steps.version.outputs.version }}.zip
+          files: ascent-assets.v${{ steps.version.outputs.version }}.zip
           tag_name: v${{ steps.version.outputs.version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
