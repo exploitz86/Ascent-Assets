@@ -20,7 +20,7 @@ jobs:
       
       - name: Create zip file
         run: |
-          zip -r ascent-assets-${{ steps.version.outputs.version }}.zip . \
+          zip -r Ascent-Assets.v${{ steps.version.outputs.version }}.zip . \
             -x "LICENSE.md" "VERSION" ".git/*" ".github/*" "*.zip"
       
       - name: Create Release
